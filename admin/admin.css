@@ -1,0 +1,262 @@
+#section3{
+   
+    display: flex;
+    justify-content: space-around;
+}
+
+#icon{
+    color: var(--color1);
+}
+h2{
+    color: var(--color1);
+}
+p{
+    color: var(--color2);
+    font-size: 70px;
+}
+::placeholder{
+    color: var(--color2);
+    
+}
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: var(--colbg);
+    border-radius: 1px 1px 12px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 80px;
+}
+.lock-icon {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.8rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+p {
+    font-size: 24px;
+}
+.passInput {
+    margin-top: 32px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--colecri);
+    font-size: 24px;
+    color: var(--colecri);
+    outline: none;
+}
+#butsub:hover{
+    color: var(--colecri);
+    background-color: var(--color4);
+    zoom: 1.1;
+    box-shadow: 12px 6px 2px #ffa78c;
+}
+#butsub {
+    margin-top: 15px;
+    width:75%;
+    font-size: 21px;
+    background-color: var(--colecri);
+    color: var(--colbg);
+    border: 2px solid var(--colecri);
+    padding: 10px;
+    text-transform: uppercase;
+}
+:root{
+    --color1:#000000;
+    --color2:#3E3636 ;
+    --color3: #D72323;
+    --color4: #F5EDED;
+    --colbg: #ffeee9;
+    --colecri:#f35525;
+    
+  }     
+  .btnclass{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    
+  }
+  
+  #button1:hover{
+    color: var(--colecri);
+    background-color: var(--color4);
+   
+    
+}
+#button1{
+    border-radius: 28px 0px 0px 0px ;
+    padding-left: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    width:17.3%;
+    font-size: 21px;
+    background-color: var(--colbg);
+    color: var(--colecri);
+    border: 2px solid var(--colbg);
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+  #button2:hover{
+    color: var(--colecri);
+    background-color: var(--color4);
+   
+    
+}
+#button2{
+    border-radius: 0px 28px 0px 0px ;
+    padding-left: 25px;
+    margin-top: 15px;
+    width:18%;
+    cursor: pointer;
+    font-size: 21px;
+    background-color: var(--colecri);
+    color: var(--colbg);
+    border: 2px solid var(--colecri);
+    padding: 10px;
+    text-transform: uppercase;
+}
+.error {
+    border-color: red;
+}
+.disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+/*message .....*/
+#container_avis{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+h1 {
+    margin-top: 20px;
+    color: var(--colecri);
+}
+
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/*produit*/
+#categor{
+    color: white;
+    background-color: #f35525;
+    width: 100%;
+    text-align: center;
+    height: 46px;
+    font-size: 19px;
+}
+
+.button_produit{
+    
+   border: none;
+   background-color: var(--colbg);
+   color: var(--colecri);
+   font-size: 25px;
+   cursor: pointer;
+}
+.button{
+    display: flex;
+    padding-left: 20px;
+
+}
+.MardBox{
+   display: flex;
+   justify-content: space-evenly;
+   position: relative;
+    width: 100%;
+    padding: 20px;
+   
+    grid-gap: 30px;
+}
+.cards{
+    margin-left: 12px;
+    padding: 30px 80px;
+    position: relative;
+    background: var(--colbg);
+    
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+#k{
+   
+    display: flex;
+    justify-content: space-around;
+}
+/*produit tableau*/
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--colecri);
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+   
+    border-left: none;
+    border-right: none;
+   
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 96%;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table th{
+    color: var(--colecri);
+    border-bottom: 0.5px solid #ffe0bd;
+    border-top: 0.5px solid #ffe0bd;
+    text-align: center;
+    
+}
+tbody tr{
+    color: var(--colecri);
+    border-bottom: 0.5px solid #ffe0bd;
+    border-top: 0.5px solid #ffe0bd;
+    text-align: center;
+    
+}
+#descri{
+    width: 55%;
+}
+#impr{
+    width: 25%;
+}
+td{
+    text-align: center;
+}

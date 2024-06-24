@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="signup.css">
+     
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>CESARO </title> 
+
+</head>
+<body>
+    <div class="container">
+        <header>Inscription</header>
+
+        <form id="registerForm" action="index_register.php" method="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Formulaire d'inscription</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nom</label>
+                            <input name="nom" type="text" placeholder="Enter votre Nom" id="nom" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Prenom</label>
+                            <input type="text" name="prenom" id="prenom" placeholder="Enter votre Prenom" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Adresse</label>
+                            <input name="adresse" id="adresse" type="text" placeholder="Enter votre Adresse" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input name="email" pattern="[^ @]*@[^ @]*" id="email" type="email" placeholder="Enter votre email" required>
+                        </div> 
+
+                        <div class="input-field">
+                            <label>Numero de Telephone</label>
+                            <input name="telephone" id="telephone" type="number" placeholder="Enter votre Telephone" required>
+                        </div>
+                        
+
+                        <div class="input-field">
+                            <label>code postal</label>
+                            <input name="codepostale" id="codepostale" type="text" placeholder="Enter votre Code Postale" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ville</label>
+                            <input type="text" id="ville" name="ville" placeholder="Enter votre Ville" required>
+                        </div>
+                        
+
+                        <div class="input-field">
+                            <label>Genre</label>
+                            <select required id="genre" name="genre">
+                                <option disabled selected>Selectionné votre genre</option>
+                                <option>Homme</option>
+                                <option>Femme</option>
+                            </select>
+                        </div>
+                          
+                        <div class="input-field">
+                            <label>Mot de passe </label>
+                            <input type="password" placeholder="Enter votre Mot de passe" id="password" name="password" required>
+                        </div> 
+                        <div class="input-field">
+                            <label>Confirmer Mot de passe</label>
+                            <input type="password" placeholder="Confirmer mot de passe" id="Confirmer" name="Confirmer" required>
+                            <span id="passwordMismatch" style="color: red; display: none;">Les mots de passe ne sont pas adaptés</span>
+                        </div> 
+                    </div>
+                    <div class="btn" id="btn-busub">
+                        <div style="display: flex; justify-content: space-evenly;">
+                            <input type="submit" style="border: none; cursor: pointer; background-color: none; font-size: 20px; color: white;" id="sumbit" value="Validé">
+                            <i style="color: white; font-size: 20px;" class="uil uil-navigator"></i>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </form>
+        
+        <script>
+            document.getElementById('registerForm').addEventListener('submit', function(event) {
+                var password = document.getElementById('password').value;
+                var confirmPassword = document.getElementById('Confirmer').value;
+    
+                if (password !== confirmPassword) {
+                    alert('Le mot de passe et la confirmation du mot de passe ne correspondent pas !');
+                    event.preventDefault();
+                }
+            });
+
+            document.getElementById('password').addEventListener('input', validatePasswords);
+            document.getElementById('Confirmer').addEventListener('input', validatePasswords);
+
+            function validatePasswords() {
+                var password = document.getElementById('password').value;
+                var confirmPassword = document.getElementById('Confirmer').value;
+                var passwordMismatch = document.getElementById('passwordMismatch');
+    
+                if (password !== confirmPassword) {
+                    passwordMismatch.style.display = 'inline';
+                } else {
+                    passwordMismatch.style.display = 'none';
+                }
+            }
+
+
+            
+        </script>
+    </div>
+<script>
+   
+
+    document.getElementById('registerForm').addEventListener('submit', function(event) {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('Confirmer').value;
+
+        if (password !== confirmPassword) {
+            alert('Le mot de passe et la confirmation du mot de passe ne correspondent pas !');
+            event.preventDefault();
+        }
+    });
+
+    document.getElementById('password').addEventListener('input', validatePasswords);
+    document.getElementById('Confirmer').addEventListener('input', validatePasswords);
+
+    function validatePasswords() {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('Confirmer').value;
+        var passwordMismatch = document.getElementById('passwordMismatch');
+
+        if (password !== confirmPassword) {
+            passwordMismatch.style.display = 'inline';
+        } else {
+            passwordMismatch.style.display = 'none';
+        }
+    }
+</script>
+
+
+    <script src="signup.js"></script>
+</body>
+</html>
